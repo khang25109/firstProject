@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+</head>
+<body>
+	<h1>New or Edit Product</h1>
+	<hr />
+	<form th:action="@{/products/saveOrUpdate}" method="post" th:object="${product}">
+	Product ID:
+	<input type="text" placeholder="Product ID" th:field="*{id}" /> <br /><br />
+	Name:
+	<input type="text" placeholder="Name" th:field="*{name}" /> <br /><br />
+	<hr />
+	<input type="submit" value="Save" />
+	</form>
+</body>
+</html>
